@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box; }
+
+.main-middle-wrapper {
+  width: 1015px;
+  height: 100vh;
+  display: flex;
+  margin: 0 auto; }
+
+.chat-participants {
+  width: 360px;
+  background-color: #3A3838;
+  background: linear-gradient(to right, #4c4a4a, #3A3838); }
+
+.dialog {
+  width: 655px;
+  background-color: #f3f3f3; }
+
+.search-container {
+  height: 80px;
+  border-bottom: 1px solid #696565;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.search {
+  background-color: #696565;
+  position: relative;
+  border-radius: 20px; }
+
+.search-input, .search-button {
+  border: none;
+  outline: none;
+  background: transparent; }
+
+.search-input {
+  width: 300px;
+  height: 40px;
+  padding-left: 50px;
+  font-size: 14px; }
+
+.search-input::-webkit-input-placeholder {
+  color: #a19d9d; }
+
+.search-button {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 0;
+  left: 9px;
+  cursor: pointer; }
+
+.search-button:before {
+  content: "\f002";
+  font-family: FontAwesome;
+  font-size: 15px;
+  color: #fff; }
+
+.post-container {
+  padding: 25px 0;
+  margin: 0 auto;
+  height: 100px;
+  width: 325px;
+  display: flex; }
+
+.post-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 25px;
+  margin-left: 10px;
+  cursor: pointer; }
+
+.post-avatar::after {
+  content: " ";
+  display: inline-block;
+  width: 50px;
+  height: 1px;
+  background-color: #696565;
+  position: relative;
+  bottom: -62px; }
+
+.post-indicator-new {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  background-color: #33cc33;
+  position: relative;
+  top: -7px;
+  right: -7px; }
+
+.post-content {
+  width: 180px;
+  margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.post-name-author {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  color: #fff;
+  margin: 3px 0; }
+
+.post-short-content {
+  font-family: "Roboto", sans-serif;
+  color: #696565;
+  font-size: 13px;
+  margin: 3px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }

@@ -1,0 +1,136 @@
+$main-dark-color: #3A3838;
+$main-font-family: 'Roboto', sans-serif;
+$main-middle-color: lighten($main-dark-color, 18%);
+$green-color: #33cc33;
+$white-color: #fff;
+
+* {
+    box-sizing: border-box;
+}
+
+.main-middle-wrapper{
+    width: 1015px;
+    height: 100vh;
+    display: flex;
+    margin: 0 auto;
+}
+
+.chat-participants{
+    width: 360px;
+    background-color: $main-dark-color;
+    background: linear-gradient(to right, lighten($main-dark-color, 7%), $main-dark-color);
+}
+
+.dialog{
+    width: 655px;
+    background-color: lighten($main-dark-color, 73%);
+}
+
+.search-container{
+    height: 80px;
+    border-bottom: 1px solid $main-middle-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search{
+    background-color: $main-middle-color;
+    position: relative;
+    border-radius: 20px;
+}
+
+.search-input, .search-button{
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.search-input{
+    width: 300px;
+    height: 40px;
+    padding-left: 50px; 
+    font-size: 14px;   
+}
+
+.search-input::-webkit-input-placeholder {
+    color: lighten($main-dark-color, 40%); 
+}
+
+.search-button{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 0;
+    left: 9px;
+    cursor: pointer;
+}
+
+.search-button:before {
+    content: "\f002";
+    font-family: FontAwesome;
+    font-size: 15px;
+    color: $white-color;
+}
+
+.post-container{
+    padding: 25px 0;
+    margin: 0 auto;
+    height: 100px;
+    width: 325px;
+    display: flex;
+}
+
+.post-avatar{
+    width: 50px;
+    height: 50px;
+    background-color: $white-color;
+    border-radius: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.post-avatar::after{
+    content: " ";
+    display: inline-block;
+    width: 50px;
+    height: 1px;
+    background-color: $main-middle-color;
+    position: relative;
+    bottom: -62px;
+}
+
+.post-indicator-new{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    background-color: $green-color;
+    position: relative;
+    top: -7px;
+    right: -7px;
+}
+
+.post-content{
+    width: 180px;  
+    margin-left: 18px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.post-name-author{
+    font-family: $main-font-family;
+    font-size: 15px;
+    color: $white-color;
+    margin: 3px 0;
+}
+
+.post-short-content{
+    font-family: $main-font-family;
+    color: $main-middle-color;
+    font-size: 13px;    
+    margin: 3px 0;    
+    white-space: nowrap;
+    overflow: hidden;    
+    text-overflow: ellipsis;
+}
