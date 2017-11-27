@@ -14,7 +14,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('default', function() {
-    gulp.run( 'sass');
+    gulp.run('sass');
     gulp.watch('scss/**', function(event) {
         gulp.run('sass');
     })

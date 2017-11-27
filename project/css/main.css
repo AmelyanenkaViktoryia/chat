@@ -1,9 +1,15 @@
 * {
   box-sizing: border-box; }
 
+.unvisible {
+  visibility: hidden; }
+
+.opacity05 {
+  opacity: 0.5; }
+
 .main-middle-wrapper {
   width: 1015px;
-  height: 100vh;
+  min-height: 1000px;
   display: flex;
   margin: 0 auto; }
 
@@ -13,10 +19,12 @@
   background: linear-gradient(to right, #4c4a4a, #3A3838); }
 
 .dialog {
+  display: flex;
+  flex-direction: column;
   width: 655px;
   background-color: #f3f3f3; }
 
-.search-container {
+.top-menu, .search-container, .participant-action {
   height: 80px;
   border-bottom: 1px solid #696565;
   display: flex;
@@ -61,15 +69,46 @@
   margin: 0 auto;
   height: 100px;
   width: 325px;
-  display: flex; }
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer; }
+  .post-container:hover::before {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 4px;
+    background-color: #1a75ff;
+    position: absolute;
+    top: 0;
+    left: -17px; }
+  .post-container:hover .post-jump {
+    color: #fff; }
 
 .post-avatar {
   width: 50px;
   height: 50px;
-  background-color: #fff;
   border-radius: 25px;
   margin-left: 10px;
   cursor: pointer; }
+  .post-avatar.first {
+    background: url("../img/one-min.jpg") no-repeat center;
+    background-size: cover; }
+  .post-avatar.second {
+    background: url("../img/two-min.jpg") no-repeat center;
+    background-size: cover; }
+  .post-avatar.third {
+    background: url("../img/three-min.jpg") no-repeat center;
+    background-size: cover; }
+  .post-avatar.fourth {
+    background: url("../img/four-min.jpg") no-repeat center;
+    background-size: cover; }
+  .post-avatar.fifth {
+    background: url("../img/five-min.jpg") no-repeat center;
+    background-size: cover; }
+  .post-avatar.sixth {
+    background: url("../img/six-min.jpg") no-repeat center;
+    background-size: cover; }
 
 .post-avatar::after {
   content: " ";
@@ -78,7 +117,7 @@
   height: 1px;
   background-color: #696565;
   position: relative;
-  bottom: -62px; }
+  bottom: -61px; }
 
 .post-indicator-new {
   width: 6px;
@@ -106,7 +145,350 @@
   font-family: "Roboto", sans-serif;
   color: #696565;
   font-size: 13px;
-  margin: 3px 0;
+  margin: -1px 0;
   white-space: nowrap;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
   text-overflow: ellipsis; }
+
+.post-jump {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-left: 30px;
+  padding-bottom: 7px;
+  color: #696565;
+  font-size: 10px;
+  font-family: "Roboto", sans-serif; }
+  .post-jump::after {
+    content: "\f141";
+    font-family: FontAwesome;
+    font-size: 16px;
+    color: #fff;
+    text-align: right;
+    padding: 0 2px 5px 0; }
+
+.participant-action {
+  justify-content: space-between;
+  border-bottom: 1px solid #a19d9d; }
+
+.participant-types {
+  font-family: "Roboto", sans-serif;
+  color: #696565;
+  font-size: 13px;
+  position: relative;
+  left: 25px; }
+
+.participant-types-bold-name {
+  font-weight: 900;
+  color: #3A3838; }
+
+.wrapper-button {
+  height: 80px;
+  display: flex; }
+
+.participant-action button {
+  width: 80px;
+  height: 80px;
+  background-color: #f3f3f3;
+  border-radius: 0;
+  border-color: #a19d9d;
+  border-top: 0;
+  cursor: pointer; }
+  .participant-action button.participant-call {
+    border-left: 0;
+    border-right: 0; }
+  .participant-action button.participant-video {
+    border-right: 0; }
+  .participant-action button.participant-favourite::before {
+    content: "\f005";
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #696565; }
+  .participant-action button.participant-call::before {
+    content: "\f095";
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #696565; }
+  .participant-action button.participant-video::before {
+    content: "\f03d";
+    font-family: FontAwesome;
+    font-size: 20px;
+    color: #696565; }
+
+button.participant-favourite:hover::before {
+  color: #ffcc00; }
+
+button.participant-call:hover::before {
+  color: #ffcc00; }
+
+button.participant-video:hover::before {
+  color: #ffcc00; }
+
+.wrapper-content-message {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end; }
+
+.wrapper-place-for-messages {
+  margin-bottom: 25px; }
+
+.wrapper-chat-message {
+  position: relative;
+  top: 25px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px; }
+
+.chat-message-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  background: url("../img/one-min.jpg") no-repeat center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin: 5px 0 0 25px; }
+  .chat-message-avatar .chat-message-time {
+    font-family: "Roboto", sans-serif;
+    font-size: 11px;
+    color: #696565;
+    position: relative;
+    top: 45px;
+    font-weight: bold; }
+
+.chat-message-body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-left: 30px;
+  max-width: 470px;
+  position: relative; }
+  .chat-message-body .chat-arrow-left {
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 7px solid #fff;
+    position: absolute;
+    top: 20px;
+    left: -14px;
+    display: inline-block;
+    transform: translateX(100%); }
+  .chat-message-body .chat-message-text {
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    color: #696565;
+    line-height: 1.5; }
+
+.wrapper-chat-message-opponent {
+  position: relative;
+  top: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 20px; }
+  .wrapper-chat-message-opponent .chat-message-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    background: url("../img/two-min.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 5px 25px 0 0;
+    order: 1; }
+    .wrapper-chat-message-opponent .chat-message-avatar .chat-message-time {
+      font-family: "Roboto", sans-serif;
+      font-size: 11px;
+      color: #696565;
+      position: relative;
+      top: 45px;
+      font-weight: bold; }
+  .wrapper-chat-message-opponent .chat-message-body {
+    background-color: #1a75ff;
+    border-radius: 5px;
+    padding: 15px;
+    max-width: 470px;
+    margin-right: 30px;
+    order: 0;
+    position: relative; }
+    .wrapper-chat-message-opponent .chat-message-body .chat-arrow-right {
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 7px solid #1a75ff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      display: inline-block;
+      transform: translateX(100%); }
+    .wrapper-chat-message-opponent .chat-message-body .chat-message-text {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.5; }
+
+.wrapper-chat-message-opponent-buy-albom {
+  position: relative;
+  top: 25px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin-bottom: 20px; }
+  .wrapper-chat-message-opponent-buy-albom .chat-message-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 17px;
+    background: url("../img/two-min.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 5px 25px 0 0;
+    order: 1; }
+    .wrapper-chat-message-opponent-buy-albom .chat-message-avatar .chat-message-time {
+      font-family: "Roboto", sans-serif;
+      font-size: 11px;
+      color: #696565;
+      position: relative;
+      top: 45px;
+      font-weight: bold; }
+  .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper {
+    background-color: #1a75ff;
+    border-radius: 5px;
+    padding: 25px;
+    max-width: 470px;
+    margin-right: 30px;
+    order: 0;
+    position: relative;
+    display: flex; }
+    .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .chat-arrow-right {
+      border-top: 6px solid transparent;
+      border-bottom: 6px solid transparent;
+      border-left: 7px solid #1a75ff;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      display: inline-block;
+      transform: translateX(100%); }
+    .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .chat-message-text {
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      color: #fff;
+      line-height: 1.5; }
+    .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper img {
+      width: 140px;
+      height: 140px;
+      background-size: cover;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
+    .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about {
+      padding: 0 25px; }
+      .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-title {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        margin: 10px 0 4px 0; }
+      .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-musician {
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        margin: 0;
+        font-weight: 100; }
+      .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-button {
+        width: 155px;
+        height: 40px;
+        background-color: #004d99;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-family: "Roboto", sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        -webkit-transition-duration: 0.4s;
+        /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+        padding: 1px 7px; }
+        .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-button:hover {
+          background-color: #003366; }
+      .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-rates {
+        padding: 15px 0;
+        display: flex;
+        align-items: center; }
+        .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-rates .buy-albom-for-stars {
+          color: #ffcc00; }
+          .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-rates .buy-albom-for-stars .fa.fa-star {
+            cursor: pointer;
+            font-size: 14px; }
+          .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-rates .buy-albom-for-stars .fa.fa-star:last-child {
+            color: #696565; }
+        .wrapper-chat-message-opponent-buy-albom .buy-albom-wrapper .buy-albom-about .buy-albom-rates .buy-albom-number-rates {
+          color: #fff;
+          font-size: 10px;
+          font-family: "Roboto", sans-serif;
+          font-weight: 100;
+          margin-left: 20px;
+          text-decoration: none; }
+
+.wrapper-type-your-message {
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #bab7b7;
+  background-color: #fdfdfd; }
+  .wrapper-type-your-message .item-more {
+    text-decoration: none;
+    cursor: pointer;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .wrapper-type-your-message .item-more::before {
+      content: "\f0c6";
+      font-family: FontAwesome;
+      font-size: 22px;
+      color: #888383;
+      font-weight: 500;
+      transform: rotate(225deg); }
+  .wrapper-type-your-message .place-for-typing {
+    width: 470px;
+    margin-left: -10px;
+    border: none;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    font-weight: 300; }
+  .wrapper-type-your-message .place-for-emoji {
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center; }
+    .wrapper-type-your-message .place-for-emoji:hover::before {
+      color: #5c5959; }
+    .wrapper-type-your-message .place-for-emoji::before {
+      content: "\f118";
+      font-family: FontAwesome;
+      font-size: 24px;
+      color: #888383; }
+  .wrapper-type-your-message .sent-your-message {
+    width: 36px;
+    height: 36px;
+    border-radius: 18px;
+    background-color: #6e6a6a;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px; }
+    .wrapper-type-your-message .sent-your-message:hover {
+      background-color: #5c5959; }
+    .wrapper-type-your-message .sent-your-message::before {
+      content: "\f1d8";
+      font-family: FontAwesome;
+      font-size: 14px;
+      color: #fff;
+      transform: rotate(20deg); }
