@@ -19,13 +19,18 @@ $blue-color: #1a75ff;
 
 .main-middle-wrapper{
     width: 1015px;
-    min-height: 1000px;
+    height: 100vmin;
+    max-height: 1000px;
+    min-height: 500px;
     display: flex;
     margin: 0 auto;
 }
 
 .chat-participants{
     width: 360px;
+    min-height: 100%;
+    // max-height: 550px;
+    overflow-y: auto;
     background-color: $main-dark-color;
     background: linear-gradient(to right, lighten($main-dark-color, 7%), $main-dark-color);    
 }
@@ -34,6 +39,7 @@ $blue-color: #1a75ff;
     display: flex;
     flex-direction: column;
     width: 655px;
+    // max-height: 550px;
     background-color: lighten($main-dark-color, 73%);
 }
 
@@ -230,6 +236,11 @@ $blue-color: #1a75ff;
 .wrapper-button{
     height: 80px;
     display: flex;
+    button {
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 .participant-action button{
@@ -247,36 +258,33 @@ $blue-color: #1a75ff;
     &.participant-video{
         border-right: 0;
     }
-    &.participant-favourite::before{
-        content: "\f005";
-        font-family: FontAwesome;
-        font-size: 20px;
-        color: $main-middle-color;        
+    &.participant-favourite svg{
+        height: 20px;
+        width: 20px;   
+        fill: $main-middle-color;
     }
-    &.participant-call::before{
-        content: "\f095";
-        font-family: FontAwesome;
-        font-size: 20px;
-        color: $main-middle-color;
+    &.participant-call svg{
+        height: 17px;
+        width: 17px;   
+        fill: $main-middle-color;
     }
-    &.participant-video::before{
-        content: "\f03d";
-        font-family: FontAwesome;
-        font-size: 20px;
-        color: $main-middle-color;
+    &.participant-video svg{
+        height: 20px;
+        width: 20px;   
+        fill: $main-middle-color;
     }
 }
 
-button.participant-favourite:hover::before{
-    color: #ffcc00;
+button.participant-favourite:hover svg{
+    fill: #ffcc00;
 }
 
-button.participant-call:hover::before{
-    color:  #ffcc00;
+button.participant-call:hover svg{
+    fill: #ffcc00;
 }
 
-button.participant-video:hover::before{
-    color:  #ffcc00;
+button.participant-video:hover svg{
+    fill: #ffcc00;
 }
 
 .wrapper-content-message{
@@ -284,10 +292,12 @@ button.participant-video:hover::before{
     flex-direction: column;
     flex: 1;
     justify-content: flex-end;
+    overflow-y: auto;
 }
 
 .wrapper-place-for-messages{
     margin-bottom: 25px;
+    height: 100%;
 }
 
 .wrapper-chat-message{
@@ -490,6 +500,9 @@ button.participant-video:hover::before{
                 &:hover{
                     background-color: #003366;
                 }
+                &:focus {
+                    outline: none;
+                }
             }
             .buy-albom-rates{
                 padding: 15px 0;
@@ -545,11 +558,16 @@ button.participant-video:hover::before{
     }
     .place-for-typing{
         width: 470px;
-        margin-left: -10px;
+        height: 80px;
+        padding-top: 30px;
         border: none;
         font-family: $main-font-family;
         font-size: 14px;
         font-weight: 300;
+        resize: none;
+        &:focus { 
+            outline: none;
+        }
     }
     .place-for-emoji{
         text-decoration: none;
@@ -585,6 +603,9 @@ button.participant-video:hover::before{
             font-size: 14px;
             color: $white-color;
             transform: rotate(20deg);
+        }
+        &:focus {
+            outline: none;
         }
     }
 }

@@ -76,9 +76,31 @@
                 <div class="participant-action">
                     <div class="participant-types"><span class="participant-types-bold-name">Kirsten Mckellar</span> is typing...</div>
                     <div class="wrapper-button">
-                        <button class="participant-favourite"></button>
-                        <button class="participant-call"></button>
-                        <button class="participant-video"></button>
+                        <button class="participant-favourite">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 475.075 475.075" style="enable-background:new 0 0 475.075 475.075;" xml:space="preserve">
+                            <g>
+                                <path d="M475.075,186.573c0-7.043-5.328-11.42-15.992-13.135L315.766,152.6L251.529,22.694c-3.614-7.804-8.281-11.704-13.99-11.704   c-5.708,0-10.372,3.9-13.989,11.704L159.31,152.6L15.986,173.438C5.33,175.153,0,179.53,0,186.573c0,3.999,2.38,8.567,7.139,13.706   l103.924,101.068L86.51,444.096c-0.381,2.666-0.57,4.575-0.57,5.712c0,3.997,0.998,7.374,2.996,10.136   c1.997,2.766,4.993,4.142,8.992,4.142c3.428,0,7.233-1.137,11.42-3.423l128.188-67.386l128.197,67.386   c4.004,2.286,7.81,3.423,11.416,3.423c3.819,0,6.715-1.376,8.713-4.142c1.992-2.758,2.991-6.139,2.991-10.136   c0-2.471-0.096-4.374-0.287-5.712l-24.555-142.749l103.637-101.068C472.604,195.33,475.075,190.76,475.075,186.573z" />
+                            </g>                            
+                            </svg>
+                        </button>
+                        <button class="participant-call">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 348.077 348.077" style="enable-background:new 0 0 348.077 348.077;" xml:space="preserve">
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path d="M340.273,275.083l-53.755-53.761c-10.707-10.664-28.438-10.34-39.518,0.744l-27.082,27.076     c-1.711-0.943-3.482-1.928-5.344-2.973c-17.102-9.476-40.509-22.464-65.14-47.113c-24.704-24.701-37.704-48.144-47.209-65.257     c-1.003-1.813-1.964-3.561-2.913-5.221l18.176-18.149l8.936-8.947c11.097-11.1,11.403-28.826,0.721-39.521L73.39,8.194     C62.708-2.486,44.969-2.162,33.872,8.938l-15.15,15.237l0.414,0.411c-5.08,6.482-9.325,13.958-12.484,22.02     C3.74,54.28,1.927,61.603,1.098,68.941C-6,127.785,20.89,181.564,93.866,254.541c100.875,100.868,182.167,93.248,185.674,92.876     c7.638-0.913,14.958-2.738,22.397-5.627c7.992-3.122,15.463-7.361,21.941-12.43l0.331,0.294l15.348-15.029     C350.631,303.527,350.95,285.795,340.273,275.083z"/>
+                                        </g>
+                                    </g>
+                                </g>
+                            </svg>
+                        </button>
+                        <button class="participant-video">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 488.3 488.3" style="enable-background:new 0 0 488.3 488.3;" xml:space="preserve" width="512px" height="512px">
+                                <g>
+                                    <path d="M488.3,142.5v203.1c0,15.7-17,25.5-30.6,17.7l-84.6-48.8v13.9c0,41.8-33.9,75.7-75.7,75.7H75.7C33.9,404.1,0,370.2,0,328.4   V159.9c0-41.8,33.9-75.7,75.7-75.7h221.8c41.8,0,75.7,33.9,75.7,75.7v13.9l84.6-48.8C471.3,117,488.3,126.9,488.3,142.5z" />
+                                </g>
+                            </svg>
+                        </button>
                     </div>                        
                 </div> 
                 <div class="wrapper-content-message">
@@ -169,12 +191,21 @@
                                 </div>
                                 <span class="chat-arrow-right"></span>
                             </div>
+                        </div>     
+                        <div class="wrapper-chat-message-opponent"> 
+                            <div class="chat-message-avatar">
+                                <span class="chat-message-time">12:43</span>
+                            </div>                   
+                            <div class="chat-message-body">                        
+                                <p class="chat-message-text">Haha awesome, I think I know the album your looking.</p>
+                                <span class="chat-arrow-right"></span>
+                            </div>
                         </div> 
                     </div>
                 </div> 
                 <div class="wrapper-type-your-message">
                     <a class="item-more"></a>
-                    <input class="place-for-typing" type="text" placeholder="Type your message...">
+                    <textarea class="place-for-typing" rows="4" cols="10" type="text" placeholder="Type your message..." ></textarea>
                     <a class="place-for-emoji"></a>
                     <button class="sent-your-message"></button>
                 </div>
