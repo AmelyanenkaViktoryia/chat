@@ -1,0 +1,71 @@
+.participant-action{
+  @extend .top-menu;
+  justify-content: space-between;
+  border-bottom: 1px solid lighten($main-dark-color, 40%);    
+  .participant-types{
+      font-family: $main-font-family;    
+      font-size: 13px;
+      position: relative;    
+      &.participant-types_middle_color {
+          color: $main-middle-color;
+      }
+      &.participant-types_left {
+          left: 25px;
+      }
+      .participant-types_bold_name{
+          font-weight: 900;
+          color: $main-dark-color;
+      }
+  }
+  .wrapper-button{
+      height: 80px;
+      display: flex;
+      button {
+          &:focus {
+              outline: none;
+          }
+      }
+  }
+  button{
+      width: 80px;
+      height: 80px;
+      background-color: lighten($main-dark-color, 73%);
+      border-radius: 0; 
+      border-color: lighten($main-dark-color, 40%);
+      border-top: 0;
+      cursor: pointer;    
+      &.participant-call{
+          border-left: 0;
+          border-right: 0;
+      }
+      &.participant-video{
+          border-right: 0;
+      }
+      &.participant-favourite svg{
+          height: 20px;
+          width: 20px;   
+          fill: $main-middle-color;
+      }
+      &.participant-call svg{
+          height: 17px;
+          width: 17px;   
+          fill: $main-middle-color;
+      }
+      &.participant-video svg{
+          height: 20px;
+          width: 20px;   
+          fill: $main-middle-color;
+      }
+  }
+  button.participant-favourite:hover svg{
+      fill: #ffcc00;
+  }
+  
+  button.participant-call:hover svg{
+      fill: #ffcc00;
+  }
+  
+  button.participant-video:hover svg{
+      fill: #ffcc00;
+  }
+}

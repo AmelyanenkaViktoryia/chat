@@ -1,0 +1,123 @@
+.post-container{
+  padding: 25px 0;
+  height: 100px;
+  width: 325px;
+  display: flex;
+  text-decoration: none;
+  position: relative;
+  cursor: pointer;
+  &:hover::before{
+      content: "";
+      display: block;
+      height: 100px;
+      width: 4px;
+      background-color: $blue-color;
+      position: absolute;
+      top: 0;
+  }
+  &:hover .post-jump{
+      color: $white-color;
+  }
+  .post-avatar{
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      margin-left: 15px;
+      cursor: pointer;    
+      &.first{
+          background: url("../img/one-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+      &.second{
+          background: url("../img/two-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+      &.third{
+          background: url("../img/three-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+      &.fourth{
+          background: url("../img/four-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+      &.fifth{
+          background: url("../img/five-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+      &.sixth{
+          background: url("../img/six-min.jpg") no-repeat center;
+          background-size: cover;
+      }
+  }
+  .post-avatar::after{
+      content: " ";
+      display: inline-block;
+      width: 50px;
+      height: 1px;
+      background-color: $main-middle-color;
+      position: relative;
+      bottom: -61px;
+  }
+  .post-indicator-new{
+      width: 6px;
+      height: 6px;
+      border-radius: 3px;    
+      position: relative;        
+      &.post-indicator-new_green {
+          background-color: $green-color;
+      }
+      &.post-indicator-new_right {
+          top: -7px;
+          right: -10px;
+      }
+  }
+  .post-content{
+      width: 180px;  
+      margin-left: 18px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+  
+  .post-name-author{
+      font-family: $main-font-family;
+      font-size: 15px;    
+      margin: 3px 0;
+      &.post-name-author_white {
+          color: $white-color;
+      }
+  }
+  
+  .post-short-content{
+      font-family: $main-font-family;
+      font-size: 13px;    
+      margin: -1px 0;       
+      &.post-short-content_middle_color {
+          color: $main-middle-color;
+      }
+      &.post-short-content_shorten {
+          white-space: nowrap;
+          overflow-x: hidden;    
+          overflow-y: auto;
+          text-overflow: ellipsis;
+      }
+  }    
+  .post-jump{
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: 25px;
+      padding-bottom: 7px;    
+      font-size: 10px;
+      font-family: $main-font-family;
+      svg {
+          height: 20px;
+          width: 15px;
+          fill: $white-color;
+          position: relative;
+          right: -8px;
+      }    
+      &.post-jump_middle_color {
+          color: $main-middle-color;
+      }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "chat",
+  "version": "0.0.1",
+  "description": "chat for web",
+  "main": "gulpfile.js",
+  "scripts": {
+    "deploy": "npm install && gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AmelyanenkaViktoryia/chat"
+  },
+  "keywords": [
+    "chat"
+  ],
+  "author": "Viktoryia Amelyanenka Viktoryia_Amelyanenka@epam.com",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.2.0",
+    "gulp-rename": "^1.2.2",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "gulp-sass": "^3.1.0"
+  }
+}
